@@ -1,0 +1,6 @@
+@mixin styleSelectText($color: black, $bgColor: white) {
+  &::selection {
+    background: $bgColor;
+    color: $color;
+  }
+}

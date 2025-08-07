@@ -1,0 +1,8 @@
+@mixin truncateLine($lineHeight: 20px, $linesClamp: 2) {
+  display: -webkit-box;
+  line-height: #{$lineHeight};
+  -webkit-line-clamp: $linesClamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

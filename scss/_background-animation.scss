@@ -1,0 +1,32 @@
+@mixin backgroundAnimation($bgColor: black, $color: white, $duration: 0.5s, $borderSize: 5px) {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: $bgColor;
+    border-right: $borderSize solid $color;
+    border-top: $borderSize / 3 solid $color;
+    border-bottom: $borderSize / 3 solid $color;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    transition: $duration ease;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $color;
+    transition: $duration * 2 ease;
+
+    &:before {
+      width: 100%;
+      left: 0;
+      right: auto;
+      opacity: 1;
+    }
+  }
+}

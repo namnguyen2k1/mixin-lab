@@ -1,0 +1,19 @@
+@mixin borderStartCenter($height: 5px, $color: black, $duration: 0.5s) {
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: $height;
+    width: 0;
+    background: $color;
+    transition: $duration all ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}

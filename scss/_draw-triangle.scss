@@ -1,0 +1,19 @@
+@mixin drawTriangle($position: top, $color: white, $size: 10px, $left: 25%) {
+  &:before {
+    content: '';
+    position: absolute;
+    left: $left;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+
+    @if $position ==top {
+      top: -$size;
+      border-bottom: $size solid $color;
+    }
+
+    @else if $position ==bottom {
+      bottom: -$size;
+      border-top: $size solid $color;
+    }
+  }
+}

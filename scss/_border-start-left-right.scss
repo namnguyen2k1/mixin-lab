@@ -1,0 +1,26 @@
+@mixin borderStartLeftRight($height: 5px, $color: black, $duration: 0.5s, $start: left) {
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: $height;
+    width: 0;
+    background-color: $color;
+    border-radius: 999px;
+    transition: $duration all ease;
+
+    @if $start ==left {
+      left: 0;
+    }
+
+    @else {
+      right: 0;
+    }
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}

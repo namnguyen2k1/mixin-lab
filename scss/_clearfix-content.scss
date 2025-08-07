@@ -1,0 +1,6 @@
+@mixin clearfixContent() {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}

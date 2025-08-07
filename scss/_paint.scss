@@ -1,0 +1,4 @@
+@mixin paint($bgColor: grey, $color: black) {
+  background: $bgColor;
+  color: $color;
+}
