@@ -5,5 +5,5 @@ export function removeVietnameseTones(str: string, replaceSpace = false): string
   str = str.trim();
   str = str.replace(/!|@|%|\^|\*|\(|\)|\+|=|<|>|\?|\/|,|\.|:|;|'|\"|&|#|\[|]|~|\$|_|`|-|{|}|\||\\/g, ' ');
   if (replaceSpace) str = str.replaceAll(' ', '_');
-  return str.replace('pro max', 'promax');
+  return str;
 }
